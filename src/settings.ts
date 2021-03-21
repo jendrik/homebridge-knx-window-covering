@@ -8,6 +8,6 @@ export const PLATFORM_NAME = 'knx-window-covering';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = pkg.name;
+export const PLUGIN_NAME = 'homebridge-' + PLATFORM_NAME;
 export const PLUGIN_DISPLAY_NAME = pkg.displayName;
 export const PLUGIN_VERSION = pkg.version;

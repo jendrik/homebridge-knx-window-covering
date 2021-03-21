@@ -1,7 +1,6 @@
 {
-  "private": true,
   "displayName": "KNX Window Covering",
-  "name": "homebridge-knx-window-covering",
+  "name": "@jendrik/homebridge-knx-window-covering",
   "version": "0.1.0",
   "description": "Homebridge plugin for KNX Window Coverings",
   "license": "Apache-2.0",
