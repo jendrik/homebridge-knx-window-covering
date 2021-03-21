@@ -1,0 +1,125 @@
+{
+  "pluginAlias": "knx-window-covering",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "ip": {
+      "title": "KNX Router or Interface",
+      "type": "string",
+      "placeholder": "127.0.0.1",
+      "description": "IP of the KNX Router."
+    },
+    "port": {
+      "title": "KNX Port",
+      "type": "string",
+      "placeholder": "3671",
+      "description": "KNX Port"
+    },
+    "latitude": {
+      "title": "Latitude",
+      "type": "number",
+      "placeholder": "51.790986",
+      "description": "Latitude of Window Covering"
+    },
+    "longitude": {
+      "title": "Longitude",
+      "type": "number",
+      "placeholder": "9.436365",
+      "description": "Longitude of Window Covering"
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "title": "Window Coverings",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "required": true,
+            "placeholder": "Display Name for Window Cover"
+          },
+          "listen_move": {
+            "title": "Listen Move",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "set_stop": {
+            "title": "Set Stop",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "listen_current_position": {
+            "title": "Listen Current Position",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "set_target_position": {
+            "title": "Set Target Position",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "listen_current_horizontal_tilt_angle": {
+            "title": "Listen Current Horizontal Tilt Angle",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "set_target_horizontal_tilt_angle": {
+            "title": "Set Target Horizontal Tilt Angle",
+            "type": "string",
+            "required": true,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          },
+          "listen_obstruction_detected": {
+            "title": "Listen Obstruction Detected",
+            "type": "string",
+            "required": false,
+            "placeholder": "1/1/1",
+            "pattern": "^[0-9]{1,4}/[0-9]{1,4}/[0-9]{1,4}$"
+          }
+        }
+      }
+    }
+  },
+  "layout": [
+    {
+      "key": "devices",
+      "type": "array",
+      "orderable": false,
+      "buttonText": "Add Window Covering",
+      "items": [
+        "devices[].name",
+        "devices[].listen_move",
+        "devices[].set_stop",
+        "devices[].listen_current_position",
+        "devices[].set_target_position",
+        "devices[].listen_current_horizontal_tilt_angle",
+        "devices[].set_target_horizontal_tilt_angle",
+        "devices[].listen_obstruction_detected"
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Global",
+      "expandable": true,
+      "expanded": false,
+      "items": [
+        "ip",
+        "port",
+        "latitude",
+        "longitude"
+      ]
+    }
+  ]
+}

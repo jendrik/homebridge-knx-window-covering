@@ -1,2 +1,2 @@
-# homebridge-knx-window-covering
-Homebridge Plugin for KNX Window Coverings
+# homebridge-knx-thermo
+Homebridge Plugin for KNX Thermostats
