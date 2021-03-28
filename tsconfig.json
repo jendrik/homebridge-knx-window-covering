@@ -12,6 +12,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
