@@ -6,7 +6,7 @@
     "ip": {
       "title": "KNX Router or Interface",
       "type": "string",
-      "placeholder": "127.0.0.1",
+      "placeholder": "224.0.23.12",
       "description": "IP of the KNX Router."
     },
     "port": {

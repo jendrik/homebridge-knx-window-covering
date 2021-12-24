@@ -27,7 +27,7 @@ export class WindowCoveringPlatform implements StaticPlatformPlugin {
 
     // connect
     this.connection = new Connection({
-      ipAddr: config.ip ?? '127.0.0.1',
+      ipAddr: config.ip ?? '224.0.23.12',
       ipPort: config.port ?? 3671,
       handlers: {
         connected: function () {
